@@ -114,7 +114,7 @@ public class TrayIconManager {
         aboutItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.print("www.google.com,");
+                System.out.print("https://github.com/RedditCanFly/RedditCanFly,");
             }
         });
 
