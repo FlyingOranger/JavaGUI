@@ -15,6 +15,7 @@ public class TrayIconManager {
     private Image orangeEnvelope, grayEnvelope;
     private boolean isSupported;
     private TrayIcon trayIcon;
+    private MenuItem notificationPlaceHolder;
 
     public static TrayIconManager getInstance(){
         if (INSTANCE == null){
@@ -50,23 +51,28 @@ public class TrayIconManager {
     public void addNotification(String title, String link){
 
         if (isSupported) {
+            final PopupMenu pMenu = trayIcon.getPopupMenu();
 
-            for (int i = 0; i < trayIcon.getPopupMenu().getItemCount(); i++) {
+            // we do not want to add this item if the link is already present in the list
+            // to keep track of the item's link, we make a new class LinkMenuItem
+            for (int i = 0; i < pMenu.getItemCount(); i++) {
 
-                MenuItem item = trayIcon.getPopupMenu().getItem(i);
+                MenuItem item = pMenu.getItem(i);
                 if (item instanceof LinkMenuItem){
                     if ( ((LinkMenuItem) item).getLink().equals(link) )
                         return;
                 }
             }
 
+            // the new item to add
             MenuItem newItem = new LinkMenuItem(title, link);
             newItem.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    trayIcon.getPopupMenu().remove(newItem);
+                    pMenu.remove(newItem);
                     System.out.print(link + ",");
-                    if (trayIcon.getPopupMenu().getItem(2).getLabel().equals("-")) {
+                    if (!(pMenu.getItem(0) instanceof LinkMenuItem)){
+                        pMenu.insert(notificationPlaceHolder, 0);
                         trayIcon.setImage(grayEnvelope);
                         trayIcon.setToolTip("no mail :(");
                     }
@@ -74,7 +80,13 @@ public class TrayIconManager {
                 }
             });
 
-            trayIcon.getPopupMenu().insert(newItem, 2);
+            // if the first item is not a link item... then it's the gray placeholder
+            if (!(pMenu.getItem(0) instanceof LinkMenuItem))
+                pMenu.remove(0);
+
+            // add the new item
+            pMenu.insert(newItem, 0);
+
             trayIcon.setToolTip("You've got mail!");
             trayIcon.setImage(orangeEnvelope);
         }
@@ -116,8 +128,10 @@ public class TrayIconManager {
             }
         });
 
-        popMen.add("Notifications");
-        popMen.addSeparator();
+        notificationPlaceHolder = new MenuItem("Future Notifications");
+        notificationPlaceHolder.setEnabled(false);
+
+        popMen.add( notificationPlaceHolder);
         popMen.addSeparator();
         popMen.add(disable);
         popMen.addSeparator();
