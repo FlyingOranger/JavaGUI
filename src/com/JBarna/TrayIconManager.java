@@ -16,6 +16,7 @@ public class TrayIconManager {
     private boolean isSupported;
     private TrayIcon trayIcon;
     private MenuItem notificationPlaceHolder;
+    private CheckboxMenuItem startupItem;
 
     public static TrayIconManager getInstance(){
         if (INSTANCE == null){
@@ -46,6 +47,66 @@ public class TrayIconManager {
                 isSupported = false;
             }
         }
+    }
+
+    private PopupMenu createRightPopupMenu(){
+
+        PopupMenu popMen = new PopupMenu();
+
+
+        CheckboxMenuItem disable = new CheckboxMenuItem("Disable flying notifications");
+        disable.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                int id = e.getStateChange();
+                if (id == ItemEvent.SELECTED)
+                    FlyingGUI.getInstance().setFlyingState(false);
+                else
+                    FlyingGUI.getInstance().setFlyingState(true);
+            }
+        });
+
+        startupItem = new CheckboxMenuItem("Run on startup");
+        startupItem.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                int id = e.getStateChange();
+                if (id == ItemEvent.SELECTED)
+                    Connector.getInstance().sendConfig(Connector.runOnStartup, "true");
+                else
+                    Connector.getInstance().sendConfig(Connector.runOnStartup, "false");
+            }
+        });
+
+        MenuItem aboutItem = new MenuItem("About");
+        aboutItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Connector.getInstance().openLink("https://github.com/RedditCanFly/RedditCanFly");
+            }
+        });
+
+        MenuItem exit = new MenuItem("Exit");
+        exit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Connector.getInstance().sendExit();
+                System.exit(0);
+            }
+        });
+
+        notificationPlaceHolder = new MenuItem("Future Notifications");
+        notificationPlaceHolder.setEnabled(false);
+
+        popMen.add( notificationPlaceHolder);
+        popMen.addSeparator();
+        popMen.add(disable);
+        popMen.add(startupItem);
+        popMen.addSeparator();
+        popMen.add(aboutItem);
+        popMen.add(exit);
+
+        return popMen;
     }
 
     public void addNotification(String title, String link){
@@ -93,52 +154,11 @@ public class TrayIconManager {
 
     }
 
-    private PopupMenu createRightPopupMenu(){
+    public void setStartupState(String value){
 
-        PopupMenu popMen = new PopupMenu();
+        boolean val = Boolean.parseBoolean(value);
+        startupItem.setState(val);
 
-
-        CheckboxMenuItem disable = new CheckboxMenuItem("Disable flying notifications");
-        disable.addItemListener(new ItemListener() {
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                int id = e.getStateChange();
-                if (id == ItemEvent.SELECTED)
-                    FlyingGUI.getInstance().setFlyingState(false);
-                else
-                    FlyingGUI.getInstance().setFlyingState(true);
-            }
-        });
-
-        MenuItem aboutItem = new MenuItem("About");
-        aboutItem.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.print("https://github.com/RedditCanFly/RedditCanFly,");
-            }
-        });
-
-        MenuItem exit = new MenuItem("Exit");
-        exit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.print("EXIT,");
-                System.out.flush();
-                System.exit(0);
-            }
-        });
-
-        notificationPlaceHolder = new MenuItem("Future Notifications");
-        notificationPlaceHolder.setEnabled(false);
-
-        popMen.add( notificationPlaceHolder);
-        popMen.addSeparator();
-        popMen.add(disable);
-        popMen.addSeparator();
-        popMen.add(aboutItem);
-        popMen.add(exit);
-
-        return popMen;
     }
 
     private static class LinkMenuItem extends MenuItem {

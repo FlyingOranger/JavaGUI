@@ -9,11 +9,12 @@ import java.util.Scanner;
  * Created by JBarna on 4/23/2016.
  */
 public class Connector {
-    private static Connector INSTANCE;
+    public final static String runOnStartup = "run_on_startup";
 
-    private FlyingGUI gui;
+    private static Connector INSTANCE;
+    private final static String DELIM = ",";
     private Scanner in;
-    private TrayIconManager iconManager;
+
 
     public static Connector getInstance(){
 
@@ -35,27 +36,52 @@ public class Connector {
             @Override
             public void run() {
 
+                // just beware, if you're testing, when you press enter you send a '\n'
                 String title = in.next();
 
                 if (title.equals("EXIT"))
                     System.exit(0);
 
-                String link = in.next();
+                else if (title.equals("CONFIG")){
 
-                if (!link.equals("empty_link"))
-                    TrayIconManager.getInstance().addNotification(title, link);
+                    String configKey = in.next();
+                    String configValue = in.next();
 
-                if (!title.equals("empty_title")) {
-                    final String _title = title;
-                    SwingUtilities.invokeLater(new Runnable() {
-                        @Override
-                        public void run() {
-                            FlyingGUI.getInstance().go(_title);
-                        }
-                    });
+                    if (configKey.equals("run_on_startup"))
+                        TrayIconManager.getInstance().setStartupState(configValue);
+
+                    waitForNewMessage();
+
+                } else {
+
+                    String link = in.next();
+
+                    if (!link.equals("empty_link"))
+                        TrayIconManager.getInstance().addNotification(title, link);
+
+                    if (!title.equals("empty_title")) {
+                        final String _title = title;
+                        SwingUtilities.invokeLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                FlyingGUI.getInstance().go(_title);
+                            }
+                        });
+                    }
                 }
             }
         }).start();
     }
 
+    public void openLink(String link){
+        System.out.print("LINK" + DELIM + link + DELIM);
+    }
+
+    public void sendConfig(String key, String value){
+        System.out.print("CONFIG" + DELIM + key + DELIM + value + DELIM);
+    }
+
+    public void sendExit(){
+        System.out.print("EXIT" + DELIM);
+    }
 }
