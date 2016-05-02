@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="796117bd-66af-4c46-9afc-83d00451159d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/JBarna/Connector.java" afterPath="$PROJECT_DIR$/src/com/JBarna/Connector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/JBarna/TrayIconManager.java" afterPath="$PROJECT_DIR$/src/com/JBarna/TrayIconManager.java" />
     </list>
     <ignored path="RedditNotifier.iws" />
@@ -36,39 +35,35 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrayIconManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TrayIconManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/JBarna/TrayIconManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.965517">
-              <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
+            <state vertical-scroll-proportion="0.6535948">
+              <caret line="133" column="71" selection-start-line="133" selection-start-column="71" selection-end-line="133" selection-end-column="71" />
               <folding>
                 <element signature="method#getInstance#0;class#TrayIconManager#0" expanded="false" />
                 <element signature="method#TrayIconManager#0;class#TrayIconManager#0" expanded="false" />
                 <element signature="class#1570:1933" expanded="false" />
-                <element signature="method#addNotification#0;class#TrayIconManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#4198:4703" expanded="false" />
                 <element signature="class#LinkMenuItem#0;class#TrayIconManager#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Connector.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Connector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/JBarna/Connector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5094637">
+            <state vertical-scroll-proportion="0.0">
               <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
-                <element signature="e#2023#2024#0" expanded="true" />
-                <element signature="e#2086#2087#0" expanded="true" />
-                <element signature="e#2250#2251#0" expanded="true" />
-                <element signature="e#2298#2299#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,6 +75,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="e#2104#2105#0" expanded="false" />
                 <element signature="e#2150#2151#0" expanded="false" />
               </folding>
@@ -110,8 +106,8 @@
         <option value="$PROJECT_DIR$/src/com/JBarna/TrayIcon.java" />
         <option value="$PROJECT_DIR$/src/com/JBarna/Main.java" />
         <option value="$PROJECT_DIR$/src/com/JBarna/FlyingGUI.java" />
-        <option value="$PROJECT_DIR$/src/com/JBarna/TrayIconManager.java" />
         <option value="$PROJECT_DIR$/src/com/JBarna/Connector.java" />
+        <option value="$PROJECT_DIR$/src/com/JBarna/TrayIconManager.java" />
       </list>
     </option>
   </component>
@@ -146,7 +142,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -167,8 +164,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -448,7 +444,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -457,7 +453,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30021143" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30021143" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.109375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -514,7 +510,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/JBarna/TrayIconManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
+          <folding>
+            <element signature="method#getInstance#0;class#TrayIconManager#0" expanded="false" />
+            <element signature="method#TrayIconManager#0;class#TrayIconManager#0" expanded="false" />
+            <element signature="class#1570:1933" expanded="false" />
+            <element signature="class#LinkMenuItem#0;class#TrayIconManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/JBarna/Connector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/JBarna/FlyingGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2104#2105#0" expanded="false" />
+            <element signature="e#2150#2151#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/JBarna/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -526,8 +569,6 @@
             <element signature="method#getInstance#0;class#TrayIconManager#0" expanded="false" />
             <element signature="method#TrayIconManager#0;class#TrayIconManager#0" expanded="false" />
             <element signature="class#1570:1933" expanded="false" />
-            <element signature="method#addNotification#0;class#TrayIconManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#4198:4703" expanded="false" />
             <element signature="class#LinkMenuItem#0;class#TrayIconManager#0" expanded="false" />
           </folding>
         </state>
@@ -539,10 +580,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -552,6 +589,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#2104#2105#0" expanded="false" />
             <element signature="e#2150#2151#0" expanded="false" />
           </folding>
@@ -562,7 +600,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -574,8 +614,6 @@
             <element signature="method#getInstance#0;class#TrayIconManager#0" expanded="false" />
             <element signature="method#TrayIconManager#0;class#TrayIconManager#0" expanded="false" />
             <element signature="class#1570:1933" expanded="false" />
-            <element signature="method#addNotification#0;class#TrayIconManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#4198:4703" expanded="false" />
             <element signature="class#LinkMenuItem#0;class#TrayIconManager#0" expanded="false" />
           </folding>
         </state>
@@ -587,10 +625,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -600,6 +634,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#2104#2105#0" expanded="false" />
             <element signature="e#2150#2151#0" expanded="false" />
           </folding>
@@ -610,7 +645,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -622,8 +659,6 @@
             <element signature="method#getInstance#0;class#TrayIconManager#0" expanded="false" />
             <element signature="method#TrayIconManager#0;class#TrayIconManager#0" expanded="false" />
             <element signature="class#1570:1933" expanded="false" />
-            <element signature="method#addNotification#0;class#TrayIconManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#4198:4703" expanded="false" />
             <element signature="class#LinkMenuItem#0;class#TrayIconManager#0" expanded="false" />
           </folding>
         </state>
@@ -635,10 +670,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -648,6 +679,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#2104#2105#0" expanded="false" />
             <element signature="e#2150#2151#0" expanded="false" />
           </folding>
@@ -658,7 +690,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -670,8 +704,6 @@
             <element signature="method#getInstance#0;class#TrayIconManager#0" expanded="false" />
             <element signature="method#TrayIconManager#0;class#TrayIconManager#0" expanded="false" />
             <element signature="class#1570:1933" expanded="false" />
-            <element signature="method#addNotification#0;class#TrayIconManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#4198:4703" expanded="false" />
             <element signature="class#LinkMenuItem#0;class#TrayIconManager#0" expanded="false" />
           </folding>
         </state>
@@ -683,10 +715,6 @@
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -696,6 +724,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#2104#2105#0" expanded="false" />
             <element signature="e#2150#2151#0" expanded="false" />
           </folding>
@@ -706,7 +735,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -718,8 +749,6 @@
             <element signature="method#getInstance#0;class#TrayIconManager#0" expanded="false" />
             <element signature="method#TrayIconManager#0;class#TrayIconManager#0" expanded="false" />
             <element signature="class#1570:1933" expanded="false" />
-            <element signature="method#addNotification#0;class#TrayIconManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#4198:4703" expanded="false" />
             <element signature="class#LinkMenuItem#0;class#TrayIconManager#0" expanded="false" />
           </folding>
         </state>
@@ -731,10 +760,6 @@
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -744,6 +769,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#2104#2105#0" expanded="false" />
             <element signature="e#2150#2151#0" expanded="false" />
           </folding>
@@ -754,7 +780,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -766,8 +794,6 @@
             <element signature="method#getInstance#0;class#TrayIconManager#0" expanded="false" />
             <element signature="method#TrayIconManager#0;class#TrayIconManager#0" expanded="false" />
             <element signature="class#1570:1933" expanded="false" />
-            <element signature="method#addNotification#0;class#TrayIconManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#4198:4703" expanded="false" />
             <element signature="class#LinkMenuItem#0;class#TrayIconManager#0" expanded="false" />
           </folding>
         </state>
@@ -779,10 +805,6 @@
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -792,6 +814,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#2104#2105#0" expanded="false" />
             <element signature="e#2150#2151#0" expanded="false" />
           </folding>
@@ -802,7 +825,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -814,8 +839,6 @@
             <element signature="method#getInstance#0;class#TrayIconManager#0" expanded="false" />
             <element signature="method#TrayIconManager#0;class#TrayIconManager#0" expanded="false" />
             <element signature="class#1570:1933" expanded="false" />
-            <element signature="method#addNotification#0;class#TrayIconManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#4198:4703" expanded="false" />
             <element signature="class#LinkMenuItem#0;class#TrayIconManager#0" expanded="false" />
           </folding>
         </state>
@@ -827,10 +850,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -840,6 +859,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#2104#2105#0" expanded="false" />
             <element signature="e#2150#2151#0" expanded="false" />
           </folding>
@@ -850,7 +870,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -859,6 +881,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#2104#2105#0" expanded="false" />
             <element signature="e#2150#2151#0" expanded="false" />
           </folding>
@@ -871,10 +894,6 @@
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -883,7 +902,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -892,6 +913,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#2104#2105#0" expanded="false" />
             <element signature="e#2150#2151#0" expanded="false" />
           </folding>
@@ -904,10 +926,6 @@
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -916,7 +934,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -924,7 +944,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -932,7 +954,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -965,7 +989,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -974,37 +1000,32 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#2104#2105#0" expanded="false" />
             <element signature="e#2150#2151#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/JBarna/TrayIconManager.java">
+    <entry file="file://$PROJECT_DIR$/src/com/JBarna/Connector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.965517">
-          <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="method#getInstance#0;class#TrayIconManager#0" expanded="false" />
-            <element signature="method#TrayIconManager#0;class#TrayIconManager#0" expanded="false" />
-            <element signature="class#1570:1933" expanded="false" />
-            <element signature="method#addNotification#0;class#TrayIconManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#4198:4703" expanded="false" />
-            <element signature="class#LinkMenuItem#0;class#TrayIconManager#0" expanded="false" />
+            <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/JBarna/Connector.java">
+    <entry file="file://$PROJECT_DIR$/src/com/JBarna/TrayIconManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5094637">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6535948">
+          <caret line="133" column="71" selection-start-line="133" selection-start-column="71" selection-end-line="133" selection-end-column="71" />
           <folding>
-            <element signature="method#waitForNewMessage#0;class#Connector#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2298#2299#0" expanded="true" />
+            <element signature="method#getInstance#0;class#TrayIconManager#0" expanded="false" />
+            <element signature="method#TrayIconManager#0;class#TrayIconManager#0" expanded="false" />
+            <element signature="class#1570:1933" expanded="false" />
+            <element signature="class#LinkMenuItem#0;class#TrayIconManager#0" expanded="false" />
           </folding>
         </state>
       </provider>

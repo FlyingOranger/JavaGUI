@@ -126,12 +126,12 @@ public class TrayIconManager {
             }
 
             // the new item to add
-            MenuItem newItem = new LinkMenuItem(title, link);
+            LinkMenuItem newItem = new LinkMenuItem(title, link);
             newItem.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     pMenu.remove(newItem);
-                    System.out.print(link + ",");
+                    Connector.getInstance().openLink(newItem.getLink());
                     if (!(pMenu.getItem(0) instanceof LinkMenuItem)){
                         pMenu.insert(notificationPlaceHolder, 0);
                         trayIcon.setImage(grayEnvelope);
