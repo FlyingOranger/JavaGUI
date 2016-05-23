@@ -2,3 +2,6 @@ out
 out/
 out/*
 JavaGUI.jar
+.idea/
+.idea
+.idea/*

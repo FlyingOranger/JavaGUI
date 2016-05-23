@@ -75,21 +75,15 @@ public class FlyingGUI extends JWindow implements ActionListener {
 
     }
 
-    public void setFlyingState(boolean weAreFlying){
-        this.weAreFlying = weAreFlying;
-    }
+    public void startFlying(String title){
 
-    public void go(String title){
-
-        if (weAreFlying) {
             getDimensions();
             this.setLocation(0 - this.getWidth(), 0);
             titleLabel.setText(title);
             this.pack();
             this.setVisible(true);
             animationTimer.start();
-        } else
-            Connector.getInstance().waitForNewMessage();
+
     }
 
     @Override
@@ -97,18 +91,19 @@ public class FlyingGUI extends JWindow implements ActionListener {
 
         int xLoc = this.getLocation().x;
 
-        if (xLoc < screenWidth && weAreFlying) {
+        if (xLoc < screenWidth) {
             this.setLocation(xLoc + 5, 0);
 
         }
         else {
-
-            animationTimer.stop();
-            this.setVisible(false);
-
+            stopFlying();
             Connector.getInstance().waitForNewMessage();
-
         }
 
+    }
+
+    public void stopFlying(){
+        animationTimer.stop();
+        this.setVisible(false);
     }
 }

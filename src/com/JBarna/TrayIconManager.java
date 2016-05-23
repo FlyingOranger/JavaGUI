@@ -16,7 +16,9 @@ public class TrayIconManager {
     private boolean isSupported;
     private TrayIcon trayIcon;
     private MenuItem notificationPlaceHolder;
+    private Menu appsMenu;
     private CheckboxMenuItem startupItem;
+    private CheckboxMenuItem disableAllFlying;
 
     public static TrayIconManager getInstance(){
         if (INSTANCE == null){
@@ -54,15 +56,15 @@ public class TrayIconManager {
         PopupMenu popMen = new PopupMenu();
 
 
-        CheckboxMenuItem disable = new CheckboxMenuItem("Disable flying notifications");
-        disable.addItemListener(new ItemListener() {
+        disableAllFlying = new CheckboxMenuItem("Disable flying notifications");
+        disableAllFlying.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 int id = e.getStateChange();
                 if (id == ItemEvent.SELECTED)
-                    FlyingGUI.getInstance().setFlyingState(false);
-                else
-                    FlyingGUI.getInstance().setFlyingState(true);
+                    FlyingGUI.getInstance().stopFlying();
+
+                Connector.getInstance().sendConfig( Connector.disableAllFlying, id == ItemEvent.SELECTED ? "true": "false");
             }
         });
 
@@ -78,11 +80,22 @@ public class TrayIconManager {
             }
         });
 
+        appsMenu = new Menu("Apps");
+        MenuItem editApps = new MenuItem("Edit apps");
+        editApps.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Connector.getInstance().openLink(Connector.editApps);
+            }
+        });
+        appsMenu.add( editApps );
+
+
         MenuItem aboutItem = new MenuItem("About");
         aboutItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Connector.getInstance().openLink("https://github.com/RedditCanFly/RedditCanFly");
+                Connector.getInstance().openLink("https://github.com/FlyingOranger/FlyingOranger");
             }
         });
 
@@ -100,13 +113,49 @@ public class TrayIconManager {
 
         popMen.add( notificationPlaceHolder);
         popMen.addSeparator();
-        popMen.add(disable);
+        popMen.add(disableAllFlying);
         popMen.add(startupItem);
+        popMen.add(appsMenu);
         popMen.addSeparator();
         popMen.add(aboutItem);
         popMen.add(exit);
 
         return popMen;
+    }
+
+    public void addApp(String appName) {
+
+        Menu newApp = new Menu(appName);
+
+        appsMenu.insert(newApp, 0);
+
+    }
+
+    public void createAppConfig( final String appName, final String configName, boolean value){
+
+        // get the specific app menu
+        for (int i = 0; i < appsMenu.getItemCount(); i++ ){
+
+            if ( appsMenu.getItem(i).getLabel().equals(appName)){
+                Menu app = (Menu) appsMenu.getItem(i);
+
+                CheckboxMenuItem cbox = new CheckboxMenuItem(configName);
+                cbox.setState( value );
+                cbox.addItemListener(new ItemListener() {
+                    @Override
+                    public void itemStateChanged(ItemEvent e) {
+                        int id = e.getStateChange();
+                        Connector.getInstance().sendConfig(Connector.appConfig, appName, configName,
+                                id == ItemEvent.SELECTED ? "true": "false");
+                    }
+                });
+
+                app.add( cbox );
+                break;
+            }
+
+        }
+
     }
 
     public void addNotification(String title, String link){
@@ -154,10 +203,15 @@ public class TrayIconManager {
 
     }
 
-    public void setStartupState(String value){
+    public void setStartupState(boolean value){
 
-        boolean val = Boolean.parseBoolean(value);
-        startupItem.setState(val);
+        startupItem.setState(value);
+
+    }
+
+    public void setDisableAllFlyingState( boolean value ){
+
+        disableAllFlying.setState( value );
 
     }
 
